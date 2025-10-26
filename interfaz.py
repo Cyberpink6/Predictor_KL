@@ -27,11 +27,11 @@ class InterfazRefraccion(ctk.CTk):
     def cargar_modelo(self):
         """Cargar el modelo entrenado y sus componentes"""
         try:
-            self.modelo = joblib.load('C:\\Users\\Nene\\Downloads\\Modelo Belette\\modelo_refraccion.pkl')
-            self.scaler = joblib.load('C:\\Users\\Nene\\Downloads\\Modelo Belette\\scaler_refraccion.pkl')
-            self.error_medio = joblib.load('C:\\Users\\Nene\\Downloads\\Modelo Belette\\error_medio.pkl')
-            self.error_maximo = joblib.load('C:\\Users\\Nene\\Downloads\\Modelo Belette\\error_maximo.pkl')
-            self.columnas = joblib.load('C:\\Users\\Nene\\Downloads\\Modelo Belette\\columnas_modelo.pkl')
+            self.modelo = joblib.load('modelo_refraccion.pkl')
+            self.scaler = joblib.load('scaler_refraccion.pkl')
+            self.error_medio = joblib.load('error_medio.pkl')
+            self.error_maximo = joblib.load('error_maximo.pkl')
+            self.columnas = joblib.load('columnas_modelo.pkl')
             self.modelo_cargado = True
             print(" Modelo cargado exitosamente")
         except Exception as e:
@@ -340,4 +340,5 @@ class InterfazRefraccion(ctk.CTk):
 
 if __name__ == "__main__":
     app = InterfazRefraccion()
+
     app.mainloop()
